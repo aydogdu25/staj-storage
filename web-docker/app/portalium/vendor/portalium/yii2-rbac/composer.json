@@ -1,0 +1,22 @@
+{
+	"name" : "portalium/yii2-rbac",
+	"description" : "RBAC Module for Portalium (Yii2)",
+	"type" : "portalium-module",
+	"license": "MIT",
+	"homepage" : "https://portalium.dev",
+	"authors" : [
+		{
+			"name" : "Uğur YILDIZ",
+			"email" : "ugur.yildiz@diginova.com.tr",
+			"homepage" : "https://uguryildiz.net"
+		}
+	],
+	"support" : {
+		"issues" : "https://github.com/portalium/yii2-rbac/issues"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"portalium\\rbac\\" : "src/"
+		}
+	}
+}

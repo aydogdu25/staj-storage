@@ -1,0 +1,22 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} ^/(assets|css)
+RewriteRule ^assets/(.*)$ web/www/assets/$1 [L]
+RewriteRule ^css/(.*)$ web/www/css/$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/web/www/(assets|css)/
+RewriteCond %{REQUEST_URI} !^/data/
+RewriteCond %{REQUEST_URI} !^/favicon.ico
+RewriteCond %{REQUEST_URI} !index.php
+RewriteCond %{REQUEST_FILENAME} !-f [OR]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ web/www/index.php
+
+RewriteCond %{REQUEST_URI} ^/(api)
+RewriteRule ^api/assets/(.*)$ api/www/assets/$1 [L]
+RewriteRule ^api/css/(.*)$ api/www/css/$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/api/www/(assets|css)/
+RewriteCond %{REQUEST_URI} ^/(api)
+RewriteRule ^.*$ api/www/index.php [L]

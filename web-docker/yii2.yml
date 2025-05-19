@@ -1,0 +1,42 @@
+version: '2.2'
+services:
+
+  db:
+    image: mariadb:10.7.4
+    container_name: yii2-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - 3306:3306
+    volumes:
+      - ./database:/var/lib/mysql:rw
+    user: mysql
+
+  php:
+    container_name: yii2-php
+    volumes:
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./sites-enabled:/etc/apache2/sites-enabled:delegated
+      - ./app:/app:delegated
+    build:
+      context: ./
+      dockerfile: php.Dockerfile
+    ports:
+      - 80:80
+      - 443:443
+    links:
+      - db
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: yii2-phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - /sessions
+    links:
+      - db

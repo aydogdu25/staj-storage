@@ -1,0 +1,39 @@
+{
+	"name" : "portalium/yii2-menu",
+	"description" : "Menu Module for Portalium (Yii2)",
+	"type" : "portalium-core",
+	"license": "MIT",
+	"homepage" : "https://diginova.com.tr",
+	"authors" : [
+		{
+			"name" : "Uğur YILDIZ",
+			"email" : "ugur.yildiz@diginova.com.tr",
+			"homepage" : "https://uguryildiz.net"
+		}
+	],
+	"support" : {
+		"issues" : "https://github.com/portalium/yii2-menu/issues"
+	},
+	"repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
+			"type": "git",
+			"url": "https://github.com/diginova/kartik-yii2-widget-depdrop.git"
+		}
+    ],
+	"minimum-stability": "dev",
+	"require": {
+		"portalium/yii2-site": "*",
+		"portalium/yii2-user": "*",
+		"kartik-v/yii2-widget-colorinput": "*",
+		"diginova/kartik-yii2-widget-depdrop": "*"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"portalium\\menu\\" : "src/"
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.fixed-menu-button {
+    position: absolute;
+    top: 14px;
+}
+
+.logo-login {
+    display: flex!important;
+    margin-left: 0!important;
+}
+
+.login-bar-width {
+    max-width: 1250px;
+}
+
+.cover {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}

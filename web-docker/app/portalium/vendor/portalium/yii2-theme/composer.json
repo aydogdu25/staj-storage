@@ -1,0 +1,22 @@
+{
+	"name" : "portalium/yii2-theme",
+	"description" : "Theme Module for Portalium(Yii2)",
+	"type" : "portalium-theme",
+	"license": "MIT",
+	"homepage" : "https://portalium.dev",
+	"authors" : [
+		{
+			"name" : "Uğur YILDIZ",
+			"email" : "yildiz@diginova.com.tr",
+			"homepage" : "https://uguryildiz.net"
+		}
+	],
+	"support" : {
+		"issues" : "https://github.com/portalium/yii2-theme/issues"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"portalium\\theme\\" : "src/"
+		}
+	}
+}

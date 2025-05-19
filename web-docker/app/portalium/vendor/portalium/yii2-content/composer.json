@@ -1,0 +1,27 @@
+{
+	"name" : "portalium/yii2-content",
+	"description" : "Content Module for Portalium (Yii2)",
+	"type" : "portalium-core",
+	"license": "MIT",
+	"homepage" : "https://diginova.com.tr",
+	"authors" : [
+		{
+			"name" : "Uğur YILDIZ",
+			"email" : "ugur.yildiz@diginova.com.tr",
+			"homepage" : "https://uguryildiz.net"
+		}
+	],
+	"support" : {
+		"issues" : "https://github.com/portalium/yii2-content/issues"
+	},
+	"require" : {
+		"kartik-v/yii2-editors": "@dev",
+		"portalium/yii2-user" : "*",
+		"portalium/yii2-site" : "*"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"portalium\\content\\" : "src/"
+		}
+	}
+}
