@@ -22,6 +22,6 @@ docker-compose -p web-docker-yii2 -f yii2.yml up -d
 php migration --noIndex
 ```
 - You can access the Storage module by going to the following address in your browser:
-```http 
+```
 http://portalium/storage/default/index
 ```
