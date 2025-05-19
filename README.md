@@ -16,12 +16,31 @@ Go to web-docker directory and run the following command in terminal.
 ```bash
 docker-compose -p web-docker-yii2 -f yii2.yml up -d
 ```
-- Open a terminal in the yii2-php container and install the database with the following command:
+- ``localhost:8080`` Log in to the address with the information below.
+```
+Username: root
+Password: root
+```
+- Create an empty database named ``portalium``.
+- Open a terminal in the yii2-php container and load the database by following the commands:
 - If you are using a Mac computer, you do not need to use the ``--noIndex`` parameter.
 ```
-php migration --noIndex
+1. bash
+2. cd portalium/
+3. php init --noIndex
+4. 0
+5. yes
+6. db
+7. portalium
+8. root
+9. root
+10. yes
 ```
-- You can access the Storage module by going to the following address in your browser:
+
+## Login
+You can access the storage module in your browser with the following information:
 ```
+Username: admin
+Password: 123456
 http://portalium/storage/default/index
 ```
