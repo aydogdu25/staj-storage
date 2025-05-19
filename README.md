@@ -1,6 +1,5 @@
 ## Storage Module (Yii2 Framework)
 
----
 ## Clone
 ```bash
 git clone https://github.com/aydogdu25/staj-storage
