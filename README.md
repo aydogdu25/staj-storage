@@ -12,7 +12,7 @@ Go to the etc\hosts directory for the virtual server and add the following recor
 127.0.0.1 portalium
 ```
 ## Run
-Go to web-docker directory and run the following command in terminal.
+Go to the ``src`` directory and run the following command in the terminal.
 ```bash
 docker-compose -p web-docker-yii2 -f yii2.yml up -d
 ```
